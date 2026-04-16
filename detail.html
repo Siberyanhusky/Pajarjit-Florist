@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Detail Produk - PAJARJIT FLORIST</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BACKGROUND */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #f5f5f5);
+  background-image: url('https://www.transparenttextures.com/patterns/white-wall.png');
+  color: #111;
+}
+
+/* NAV */
+nav {
+  padding: 25px 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  text-decoration: none;
+  color: #111;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.logo {
+  font-family: 'Playfair Display';
+}
+
+/* CONTAINER */
+.container {
+  padding: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* IMAGE */
+.product-img img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* INFO */
+.product-info h1 {
+  font-family: 'Playfair Display';
+  margin-bottom: 10px;
+}
+
+.price {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.desc {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* FORM */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.btn {
+  margin-top: 15px;
+  padding: 12px;
+  width: 100%;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* INFO BOX */
+.info-box {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #777;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .container {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">PAJARJIT FLORIST</div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="produk.html">Produk</a>
+    <a href="kontak.html">Kontak</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- IMAGE -->
+  <div class="product-img">
+    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+  </div>
+
+  <!-- INFO -->
+  <div class="product-info">
+    <h1>Bouquet Mawar Premium</h1>
+    <p class="price">Rp200.000</p>
+
+    <p class="desc">
+      Bouquet mawar premium dengan desain elegan, cocok untuk hadiah spesial seperti anniversary, ulang tahun, dan momen romantis lainnya.
+    </p>
+
+    <!-- FORM -->
+    <input type="text" id="nama" placeholder="Nama Anda">
+    <input type="text" id="tanggal" placeholder="Tanggal Kirim">
+    <textarea id="ucapan" placeholder="Isi kartu ucapan"></textarea>
+
+    <button class="btn" onclick="kirimWA()">Pesan Sekarang</button>
+
+    <div class="info-box">
+      ✔ Same Day Delivery tersedia<br>
+      ✔ Pengiriman cepat & aman
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  © 2026 PAJARJIT FLORIST
+</footer>
+
+<script>
+function kirimWA(){
+  let nama = document.getElementById('nama').value;
+  let tanggal = document.getElementById('tanggal').value;
+  let ucapan = document.getElementById('ucapan').value;
+
+  let text = `Halo, saya mau pesan:%0AProduk: Bouquet Mawar Premium%0ANama: ${nama}%0ATanggal: ${tanggal}%0AUcapan: ${ucapan}`;
+
+  window.open(`https://wa.me/6289623290285?text=${text}`);
+}
+</script>
+
+</body>
+</html>
