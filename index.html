@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>PAJARJIT FLORIST</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY BACKGROUND PREMIUM */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #f7f7f7);
+  background-image: url('https://www.transparenttextures.com/patterns/white-wall.png');
+  color: #111;
+}
+
+/* NAV */
+nav {
+  position: absolute;
+  width: 100%;
+  padding: 25px 60px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  z-index: 10;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.logo {
+  font-family: 'Playfair Display';
+  letter-spacing: 1px;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url('https://images.unsplash.com/photo-1490750967868-88aa4486c946') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display';
+  font-size: 54px;
+  letter-spacing: 2px;
+}
+
+.hero p {
+  margin-top: 12px;
+  font-weight: 300;
+}
+
+.hero a {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 22px;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* SECTION */
+.section {
+  padding: 80px 60px;
+  background: #ffffff;
+}
+
+.section:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.section-title {
+  text-align: center;
+  font-family: 'Playfair Display';
+  margin-bottom: 50px;
+}
+
+/* PRODUCTS */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 25px;
+}
+
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.price {
+  color: #777;
+  margin-top: 5px;
+}
+
+/* WHY */
+.why {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 30px;
+  text-align: center;
+}
+
+.why h3 {
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  font-size: 14px;
+  color: #777;
+}
+
+/* WA FLOAT */
+.wa {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">PAJARJIT FLORIST</div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="produk.html">Produk</a>
+    <a href="kontak.html">Kontak</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div>
+    <h1>PAJARJIT FLORIST</h1>
+    <p>Fresh Flowers for Every Special Moment</p>
+    <a href="produk.html">Lihat Produk</a>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Best Seller</h2>
+
+  <div class="products">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9">
+      <div class="card-content">
+        <h3>Bouquet Wisuda Elegant</h3>
+        <p class="price">Rp150.000</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+      <div class="card-content">
+        <h3>Bouquet Mawar Premium</h3>
+        <p class="price">Rp200.000</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946">
+      <div class="card-content">
+        <h3>Bouquet Soft Pink</h3>
+        <p class="price">Rp175.000</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Why Choose Us</h2>
+
+  <div class="why">
+    <div>
+      <h3>Fresh Flowers</h3>
+      <p>Bunga segar pilihan terbaik setiap hari</p>
+    </div>
+    <div>
+      <h3>Same Day Delivery</h3>
+      <p>Pengiriman cepat di hari yang sama</p>
+    </div>
+    <div>
+      <h3>Premium Design</h3>
+      <p>Rangkaian elegan untuk momen spesial</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 PAJARJIT FLORIST
+</footer>
+
+<a class="wa" href="https://wa.me/6289623290285" target="_blank">💬</a>
+
+</body>
+</html>
